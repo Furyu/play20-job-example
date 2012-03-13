@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Basic Akka usage examples
+GET     /akka/execute-block-async   controllers.AkkaExamples.executeBlockAsync
+GET     /akka/akka-to-play          controllers.AkkaExamples.akkaToPlay
+GET     /akka/check-timeout         controllers.AkkaExamples.checkTimeout
+GET     /akka/check-pool-size       controllers.AkkaExamples.checkPoolSize
+GET     /akka/schedule-at-date      controllers.AkkaExamples.scheduleAtDate
+
+# Jobs
+GET     /jobs/now                   controllers.JobExamples.jobNow
+GET     /jobs/once                  controllers.JobExamples.jobOnce
+GET     /jobs/date                  controllers.JobExamples.jobDate
+GET     /jobs/schedule              controllers.JobExamples.jobSchedule
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
